@@ -59,7 +59,7 @@ class ButtonMenu : AppCompatActivity () {
                 val handler = Handler()
                 handler.postDelayed(Runnable { ps.dismiss() }, 1000) // 3000 milliseconds delay
 
-                ApiCall(titleList[i], urlList[i]).callFunction()
+                var listActiviti = ApiCall(urlList[i]).callFunction()
 
             }
 
