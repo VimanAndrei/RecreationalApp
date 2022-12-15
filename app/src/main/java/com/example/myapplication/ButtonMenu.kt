@@ -1,6 +1,8 @@
 package com.example.myapplication
 
+import android.app.ProgressDialog
 import android.os.Bundle
+import android.os.Handler
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityButtonsBinding
@@ -14,9 +16,27 @@ class ButtonMenu : AppCompatActivity () {
         binding = ActivityButtonsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val urlList = arrayOf(
+            "http://www.boredapi.com/api/activity?type=education",
+            "http://www.boredapi.com/api/activity?type=recreational",
+            "http://www.boredapi.com/api/activity?type=social",
+            "http://www.boredapi.com/api/activity?type=charity",
+            "http://www.boredapi.com/api/activity?type=cooking",
+            "http://www.boredapi.com/api/activity?type=music",
+            "http://www.boredapi.com/api/activity/"
+        )
+
+        val titleList = arrayOf(
+            "Education",
+            "Recreational",
+            "Social",
+            "Charity",
+            "Cooking",
+            "Music",
+            "Random"
+        )
+
         val buttons: ArrayList<Button> = ArrayList()
-
-
         var educationBtn = findViewById<Button>(R.id.education)
         var recreationalBtn = findViewById<Button>(R.id.recreational)
         var socialBtn = findViewById<Button>(R.id.social)
@@ -32,6 +52,18 @@ class ButtonMenu : AppCompatActivity () {
         buttons.add(cookingBtn)
         buttons.add(musicBtn)
         buttons.add(randomBtn)
+
+        for(i in buttons.indices){
+            buttons[i].setOnClickListener {
+                var ps = ProgressDialog.show(this, "Loading", "Wait while loading...")
+                val handler = Handler()
+                handler.postDelayed(Runnable { ps.dismiss() }, 1000) // 3000 milliseconds delay
+
+                ApiCall(titleList[i], urlList[i]).callFunction()
+
+            }
+
+        }
 
 
     }
