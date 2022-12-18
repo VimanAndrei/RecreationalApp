@@ -10,9 +10,9 @@ import java.io.IOException
 
 class ApiCall(var url:String) {
     private val client = OkHttpClient()
+    var listActivity: ArrayList<OneActivity> = ArrayList()
 
-    fun callFunction(): ArrayList<OneActivity> {
-        var listActivity: ArrayList<OneActivity> = ArrayList()
+    fun callFunction(){
         val request = Request.Builder()
             .url(url)
             .build()
@@ -36,6 +36,12 @@ class ApiCall(var url:String) {
 
             })
         }
+    }
+
+    @JvmName("getListActivity1")
+    fun getListActivity(): ArrayList<OneActivity> {
         return listActivity
     }
+
+
 }

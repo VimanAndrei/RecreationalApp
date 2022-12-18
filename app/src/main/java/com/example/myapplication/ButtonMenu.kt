@@ -57,9 +57,15 @@ class ButtonMenu : AppCompatActivity () {
             buttons[i].setOnClickListener {
                 var ps = ProgressDialog.show(this, "Loading", "Wait while loading...")
                 val handler = Handler()
-                handler.postDelayed(Runnable { ps.dismiss() }, 1000) // 3000 milliseconds delay
+                var classApi = ApiCall(urlList[i])
+                classApi.callFunction()
 
-                var listActiviti = ApiCall(urlList[i]).callFunction()
+                handler.postDelayed(Runnable {
+                    ps.dismiss()
+                    println(classApi.getListActivity().size)
+                                             }, 1500) // 3000 milliseconds delay
+
+
 
             }
 
