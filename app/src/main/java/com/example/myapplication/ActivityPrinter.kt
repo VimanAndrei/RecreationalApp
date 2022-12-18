@@ -1,12 +1,13 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.DialogInterface
+import android.graphics.Color
 import android.os.Bundle
-import android.widget.AdapterView
-import android.widget.ListView
+import android.util.Log
 import android.widget.PopupMenu
 import android.widget.TextView
-import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import com.example.myapplication.databinding.ListItemBinding
@@ -28,9 +29,49 @@ class ActivityPrinter(): AppCompatActivity() {
 
         binding.listView.adapter=ActivityAdapter(this, listOfActivity)
 
+
         binding.listView.setOnItemLongClickListener { adapterView, view, i, l ->
-            Toast.makeText(applicationContext, "Long clicked on ${binding.listView[i]}", Toast.LENGTH_LONG).show()
-            PopupMenu(this,binding.listView)
+            val listItem = binding.listView[i]
+            val popupmenu = PopupMenu(this, listItem)
+            popupmenu.menuInflater.inflate(R.menu.popup_menu, popupmenu.menu)
+
+            popupmenu.setOnMenuItemClickListener {
+                if(it.itemId == R.id.share){
+                    var alertDialog = AlertDialog.Builder(this).create()
+                    alertDialog.setTitle("Share")
+                    alertDialog.setMessage("Do you want to share this activity with a friend?")
+                    alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Yes",
+                        DialogInterface.OnClickListener { dialogInterface, i ->
+                            listItem.setBackgroundColor(Color.BLUE)
+                            true
+                        })
+
+
+                    alertDialog.setButton(AlertDialog.BUTTON_NEGATIVE, "No",
+                        DialogInterface.OnClickListener { dialogInterface, i ->
+                            true
+                        })
+
+                    alertDialog.show()
+
+                }
+                true
+            }
+            try {
+                val popup = PopupMenu::class.java.getDeclaredField("mPopup")
+                popup.isAccessible = true
+                val menu = popup.get(popup)
+                menu.javaClass.getDeclaredMethod("setForceShowIcon", Boolean::class.java)
+                    .invoke(menu,true)
+            }
+            catch (e: Exception)
+            {
+                Log.d("error", e.toString())
+            }
+            finally {
+                popupmenu.show()
+            }
+
             true
         }
     }

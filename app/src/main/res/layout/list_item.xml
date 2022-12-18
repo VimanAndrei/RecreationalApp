@@ -9,8 +9,8 @@
 
     <ListView
         android:id="@+id/listView"
-        android:layout_width="414dp"
-        android:layout_height="676dp"
+        android:layout_width="403dp"
+        android:layout_height="619dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
@@ -28,5 +28,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:textSize="30dp"/>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="409dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/listView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pageTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
