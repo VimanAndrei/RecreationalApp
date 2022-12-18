@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.app.ProgressDialog
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.widget.Button
@@ -62,7 +63,14 @@ class ButtonMenu : AppCompatActivity () {
 
                 handler.postDelayed(Runnable {
                     ps.dismiss()
-                    println(classApi.getListActivity().size)
+                    var list = classApi.getListActivity()
+                    println(list.size)
+                    val intent = Intent(this, ActivityPrinter::class.java)
+                    intent.putExtra("title", buttons[i].text)
+                    intent.putExtra("list", list)
+                    startActivity(intent)
+
+
                                              }, 1500) // 3000 milliseconds delay
 
 

@@ -8,5 +8,5 @@ class OneActivity(
     var link: String,
     var key: String,
     var accessibility: String,
-) {
+): java.io.Serializable {
 }

@@ -24,49 +24,49 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/education"
-                android:text="education"/>
+                android:text="Education"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/recreational"
-                android:text="recreational"/>
+                android:text="Recreational"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/social"
-                android:text="social"/>
+                android:text="Social"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/charity"
-                android:text="charity"/>
+                android:text="Charity"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/cooking"
-                android:text="cooking"/>
+                android:text="Cooking"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/music"
-                android:text="music"/>
+                android:text="Music"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/random"
-                android:text="random"/>
+                android:text="Random"/>
 
 
         </LinearLayout>

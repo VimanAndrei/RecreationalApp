@@ -53,6 +53,16 @@
                         android:text="Accessibility: "/>
 
 
+                    <ImageButton
+                        android:id="@+id/off"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible"
+                        app:srcCompat="@drawable/btn_star_big_off"
+                        />
+
+
+
                 </LinearLayout>
 
                 <LinearLayout
@@ -62,54 +72,43 @@
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/activity"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/type"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/participants"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/price"
+                        />
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/link"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/key"/>
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="continut"/>
+                        android:text="continut"
+                        android:id="@+id/accessibility"/>
 
 
                 </LinearLayout>
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:layout_margin="10dp">
-                <ImageButton
-                    android:id="@+id/off"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="visible"
-                    app:srcCompat="@android:drawable/btn_star_big_off"
-                    />
 
-                <ImageButton
-                    android:id="@+id/on"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@android:drawable/btn_star_big_on"
-                    android:visibility="gone"/>
-            </LinearLayout>
 
             </LinearLayout>
 
