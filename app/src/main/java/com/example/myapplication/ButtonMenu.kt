@@ -66,15 +66,12 @@ class ButtonMenu : AppCompatActivity () {
                     var list = classApi.getListActivity()
                     println(list.size)
                     val intent = Intent(this, ActivityPrinter::class.java)
-                    intent.putExtra("title", buttons[i].text)
+                    intent.putExtra("title", titleList[i])
                     intent.putExtra("list", list)
                     startActivity(intent)
 
 
                                              }, 1500) // 3000 milliseconds delay
-
-
-
             }
 
         }
