@@ -8,17 +8,15 @@ import android.graphics.Color
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
-import android.view.View
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.PopupMenu
 import android.widget.Spinner
-import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.get
 import com.example.myapplication.databinding.ListItemBinding
+import java.util.Random
 
 class ActivityPrinter() : AppCompatActivity() {
 
@@ -68,7 +66,16 @@ class ActivityPrinter() : AppCompatActivity() {
 
        var selectBtn = findViewById<Button>(R.id.select)
 
+        var random = Random()
+        var color = Color.argb(
+            255,
+            random.nextInt(256),
+            random.nextInt(256),
+            random.nextInt(256))
+        selectBtn.setBackgroundColor(color)
+
         selectBtn.setOnClickListener {
+
             var i = titleList.indexOf(spinner.selectedItem.toString())
             var ps = ProgressDialog.show(this, "Loading", "Wait while loading...")
             val handler = Handler()
