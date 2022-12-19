@@ -14,7 +14,6 @@ class ActivityAdapter(private val context : Activity,
                       private val arrayList : ArrayList<OneActivity>) :
     ArrayAdapter<OneActivity>(context, R.layout.list_item,arrayList) {
 
-
     val list = arrayListOf<Int>(0,0,0,0,0,0,0,0,0,0)
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
@@ -29,6 +28,11 @@ class ActivityAdapter(private val context : Activity,
         val link : TextView = view.findViewById(R.id.link)
         val key : TextView =  view.findViewById(R.id.key)
         val accessibility : TextView = view.findViewById(R.id.accessibility)
+        val buttonoff: ImageButton = view.findViewById(R.id.off)
+
+        if(list[position] == 1){
+            buttonoff.setImageResource(R.drawable.btn_star_big_on)
+        }
 
 
         activity.text = arrayList[position].activity
@@ -39,7 +43,7 @@ class ActivityAdapter(private val context : Activity,
         key.text =arrayList[position].key
         accessibility.text =arrayList[position].accessibility
 
-        val buttonoff: ImageButton = view.findViewById(R.id.off)
+
 
 
         buttonoff.setOnClickListener {
