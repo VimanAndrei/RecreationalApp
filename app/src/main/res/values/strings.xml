@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyApplication</string>
+    <string name="app_name">Activities</string>
 
     <string-array name="activity_array">
         <item>Education</item>

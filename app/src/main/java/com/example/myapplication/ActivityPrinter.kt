@@ -65,7 +65,6 @@ class ActivityPrinter() : AppCompatActivity() {
             spinner.adapter = adapter
         }
         spinner.setSelection(titleList.indexOf(title))
-        spinner.selectedItem.toString()
 
        var selectBtn = findViewById<Button>(R.id.select)
 
