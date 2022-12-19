@@ -24,49 +24,56 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/education"
-                android:text="Education"/>
+                android:text="Education"
+                android:backgroundTint="@android:color/holo_blue_bright"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/recreational"
-                android:text="Recreational"/>
+                android:text="Recreational"
+                android:backgroundTint="@android:color/holo_green_light"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/social"
-                android:text="Social"/>
+                android:text="Social"
+                android:backgroundTint="@android:color/holo_orange_light"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/charity"
-                android:text="Charity"/>
+                android:text="Charity"
+                android:backgroundTint="@android:color/holo_red_light"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/cooking"
-                android:text="Cooking"/>
+                android:text="Cooking"
+                android:backgroundTint="@android:color/holo_purple"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/music"
-                android:text="Music"/>
+                android:text="Music"
+                android:backgroundTint="@android:color/holo_green_dark"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:id="@+id/random"
-                android:text="Random"/>
+                android:text="Random"
+                android:backgroundTint="@android:color/holo_orange_dark"/>
 
 
         </LinearLayout>
